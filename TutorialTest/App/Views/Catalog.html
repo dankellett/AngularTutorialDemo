@@ -1,0 +1,21 @@
+﻿<div class="row">
+    <h2 class="span3 offset1">Catalog</h2>
+</div>
+<div class="row">
+    <div class="offset1">
+        <ul class="thumbnails">
+            <li style="display:none"></li> <!-- Used to remove bootsrap margin removal on first item in ul -->
+            <li class="span3" data-ng-repeat="product in products">
+                <div class="thumbnail">
+                    <img src="http://placehold.it/276x200">
+                    <div class="caption">
+                        <h3>{{product.Name}}</h3>
+                        <p>Price {{product.Price | currency}} ( x {{product.qty}} = {{ product.Price * product.qty | currency }})</p>
+                        <p><input type="number" min="1" style="width:60px;" data-ng-model="product.qty" data-ng-init="product.qty = 1"/></p>
+                        <p><a href="" class="btn btn-primary" data-ng-click="addProduct(product.Id, product.qty)">Add To Cart</a></p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

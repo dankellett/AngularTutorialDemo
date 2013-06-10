@@ -1,0 +1,7 @@
+﻿<h2>Welcome <span data-ng-bind="displayName"></span>!</h2>
+<p>{{displayName}}, this is your storefront</p>
+<p>My Name is <input type="text" data-ng-model="displayName" /></p>
+<div class="form-horizontal">
+    <input type="text" data-ng-model="toastMessage" />
+    <button class="btn" data-ng-click="displayToastMessage(toastMessage)">Toast!</button>
+</div>

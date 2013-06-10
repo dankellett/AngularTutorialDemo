@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>My Angular App</title>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet"/>
+    <link href="~/Content/toastr.css" rel="stylesheet"/>
+    <link href="~/Content/humanejs/libnotify.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-bootstrap.js"></script>
+    <script src="~/Scripts/toastr.js"></script>
+    <script src="~/Scripts/humane.js"></script>
+    
+    <script src="~/App/main.js"></script>
+
+    <script src="~/App/Services/toast.js"></script>
+    <script src="~/App/Controllers/Splash.js"></script>
+    <script src="~/App/Controllers/Cart.js"></script>
+    <script src="~/App/Controllers/Catalog.js"></script>
+    <script src="~/App/Services/datacontext.js"></script>
+    <script src="~/App/Controllers/navbar.js"></script>
+
+</head>
+<body data-ng-app="myStore">
+
+    <div class="navbar" data-ng-navbar data-ng-controller="navbarCtrl">
+      <div class="navbar-inner">
+        <a class="brand" href="#">My Store</a>
+        <ul class="nav">
+          <li class=""><a href="#">Home</a></li>
+          <li><a href="#/Catalog">Catalog</a></li>
+          <li><a href="#/Cart">Cart {{itemsInCart}}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div data-ng-view="" class="container-fluid">
+        Test on index
+    </div>
+</body>
+</html>
